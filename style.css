@@ -16,5 +16,25 @@ span {
 	color: cornsilk;
 }
 #time span {
-	font-size: 10rem;
+	font-size: 15rem;
+}
+@media screen and (max-width: 3000px) {
+	#time span {
+		font-size: 12rem;
+	}
+}
+@media screen and (max-width: 1400px) {
+	#time span {
+		font-size: 8rem;
+	}
+}
+@media screen and (max-width: 800px) {
+	#time span {
+		font-size: 5rem;
+	}
+}
+@media screen and (max-width: 350px) {
+	#time span {
+		font-size: 4rem;
+	}
 }
