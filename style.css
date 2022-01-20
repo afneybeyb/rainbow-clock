@@ -4,7 +4,7 @@ html, body {
 }
 #content {
 	height: 100%;
-	background-color: black;
+	background-color: #202020;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -16,5 +16,5 @@ span {
 	color: cornsilk;
 }
 #time span {
-	font-size: 5rem;
+	font-size: 10rem;
 }

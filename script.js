@@ -27,8 +27,32 @@ function displayTime() {
 		document.getElementById("time_" + ((i + 1) * 2 - 1)).innerHTML = time[i].slice(0, 1);
 		document.getElementById("time_" + ((i + 1) * 2)).innerHTML = time[i].slice(1, 2);
 	}
-	setTimeout(displayTime, 100);
+	if (time[2] % 12 == 0) {
+		changeStyle();
+	}
+	setTimeout(displayTime, 1000);
+}
+
+function changeStyle() {
+	let time = [];
+	for (let i = 0; i < 6; i++) {
+		time.push(document.getElementById("time_" + (i + 1)));
+	}
+	time.forEach(element => {
+		let color = "";
+		for (let i = 0; i < 3; i++) {
+			color += Math.floor(0x77 + Math.random() * 0x88).toString(16);
+		}
+		element.style.color = "#" + color;
+	});
+
+	/* 	bgColor += Math.floor(0x77 + Math.random() * 0x88).toString(16);
+	
+		document.getElementById("content").style.background = "linear-gradient(0deg, #" + color + ", #646464)"
+	 */
 }
 
 buildTime();
 displayTime();
+changeStyle();
+
